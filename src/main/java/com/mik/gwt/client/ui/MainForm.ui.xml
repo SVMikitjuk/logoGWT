@@ -1,0 +1,106 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <!--<g:HorizontalPanel >-->
+    <!--&lt;!&ndash;<g:LayoutPanel height="50%" styleName="cc1" >&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<g:Image ui:field="photo"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<g:FlowPanel>&ndash;&gt;-->
+                <!--&lt;!&ndash;<g:Label ui:field="f1" text="hi"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<g:ListBox ui:field='listBox' visibleItemCount='1'/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<g:HorizontalPanel>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label text="mobile: "/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label ui:field="mobile"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</g:HorizontalPanel>&ndash;&gt;-->
+                <!--&lt;!&ndash;<g:HorizontalPanel>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label text="email: "/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label ui:field="email"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</g:HorizontalPanel>&ndash;&gt;-->
+                <!--&lt;!&ndash;<g:HorizontalPanel>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label text="web: "/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<g:Label ui:field="web"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</g:HorizontalPanel>&ndash;&gt;-->
+            <!--&lt;!&ndash;</g:FlowPanel>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;Hello, <g:ListBox ui:field='listBox' visibleItemCount='1'/>.&ndash;&gt;-->
+        <!--<g:HorizontalPanel >-->
+            <!--<g:Label ui:field="f2" text="hello"/>-->
+            <!--<g:ListBox ui:field='listBox' visibleItemCount='1'/>-->
+        <!--</g:HorizontalPanel>&lt;!&ndash;</g:LayoutPanel>&ndash;&gt;-->
+        <!--<g:HorizontalPanel width="100">-->
+            <!--<g:Label ui:field="f3" text="hello"/>-->
+            <!--<g:ListBox ui:field='listBox2' visibleItemCount='1'/>-->
+        <!--</g:HorizontalPanel>&lt;!&ndash;</g:LayoutPanel>&ndash;&gt;-->
+    <!--</g:HorizontalPanel>-->
+
+    <!--<g:SplitLayoutPanel >-->
+        <!--<g:north size='20em'>-->
+        <!--<g:LayoutPanel>-->
+                <!--<g:layer>-->
+                    <!--<g:Label>HEAD</g:Label>-->
+                <!--</g:layer>-->
+            <!--</g:LayoutPanel>-->
+        <!--</g:north>-->
+
+        <!--<g:center>-->
+                        <!--<g:Label>Content Area</g:Label>-->
+        <!--</g:center>-->
+        <!--<g:south size='50'>-->
+                <!--<g:Label>footer</g:Label>-->
+        <!--</g:south>-->
+    <!--</g:SplitLayoutPanel>-->
+    <ui:style>
+        .northPanel {
+            /*background-color: #39F;*/
+            /*border-bottom: 5px solid #777777;*/
+        }
+
+        .southPanel {
+            background-color: #99C;
+        }
+
+        .centerPanel {
+            background-color: #FFC;
+            border-bottom: 5px solid #777777;
+            border-top: 5px solid #777777;
+        }
+
+        .logoPicture {
+            margin-left: 50px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .centerRow {
+
+        }
+    </ui:style>
+    <g:DockLayoutPanel unit="EM">
+        <g:north size="12">
+            <g:FlowPanel  styleName="{style.northPanel}">
+                <!--<g:Label>This is the NORTH panel</g:Label>-->
+                <g:Image ui:field="logo" altText="logo" styleName="{style.logoPicture}"> </g:Image>
+            </g:FlowPanel>
+        </g:north>
+        <g:center>
+            <g:FlowPanel styleName="{style.centerPanel}">
+                <g:VerticalPanel width="100">
+                    <g:HorizontalPanel styleName="{style.centerRow}" >
+                        <g:Label text="Пользователь :"/>
+                        <g:TextBox ui:field="user" > </g:TextBox>
+                    </g:HorizontalPanel>
+                <g:Label>This is the CENTER panel</g:Label>
+                <g:TextBox ui:field="password" alignment="CENTER" title="Пароль :" > </g:TextBox>
+                <g:Button ui:field="login" text="Войти"> </g:Button>
+                </g:VerticalPanel>
+            </g:FlowPanel>
+        </g:center>
+        <g:south size="5">
+            <g:FlowPanel styleName="{style.southPanel}">
+                <g:Label styleName="{style.footer}" ui:field="footer"/>
+            </g:FlowPanel>
+        </g:south>
+    </g:DockLayoutPanel>
+
+</ui:UiBinder>
